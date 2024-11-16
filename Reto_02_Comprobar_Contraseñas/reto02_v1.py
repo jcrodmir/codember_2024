@@ -1,14 +1,9 @@
 from io import open
-import re
 import time
 inicio=time.time()
 log= open("log.txt")
-
 logs=log.readlines()
-
-
 logs = [palabra.replace("\n", "") for palabra in logs]
-    
 
 def comprobra_array(array):
     Correcto=0
@@ -35,7 +30,6 @@ def comprobar_digitos_caracteres(palabra):
                 return False
     return True
 
-print(comprobar_digitos_caracteres("afg23123dsfg"))
 def comprobar_digito_ascendente(palabra):
     digito=-1
     for letra in palabra:
@@ -66,6 +60,6 @@ def comprobar_digito_tras_letra(palabra):
 comprobra_array(logs)
 
 fin=time.time()
-print(fin-inicio)
+print("Versión 1:" ,fin-inicio)
     
     

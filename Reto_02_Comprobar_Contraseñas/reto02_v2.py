@@ -1,5 +1,4 @@
 from io import open
-import re
 import time
 inicio=time.time() 
 log= open("log.txt")
@@ -45,6 +44,6 @@ def comprobar_digitos_caracteres(palabra):
 
 comprobra_array(logs)
 fin=time.time()
-print(fin-inicio)
+print("Versión 2:" ,fin-inicio)
     
     

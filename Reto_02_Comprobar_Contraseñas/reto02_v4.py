@@ -1,5 +1,4 @@
 from io import open
-import re
 import time
 inicio=time.time() 
 log= open("log.txt")
@@ -29,7 +28,7 @@ def comprobar_digitos_caracteres(palabra):
         if(caracter.isdigit() and letra_antes_digito==""):
             if(int(caracter)<digito):
                 return False
-            elif(int(caracter)>=digito):
+            else:
                 digito= int(caracter)
         elif(ord(caracter)> 97 or ord(caracter)<122):
             if(ord(caracter)<letra):
@@ -44,4 +43,4 @@ def comprobar_digitos_caracteres(palabra):
 
 comprobra_array(logs)
 fin=time.time()
-print(fin-inicio)
+print("Versión 4:" ,fin-inicio)
